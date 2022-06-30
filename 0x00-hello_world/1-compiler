@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/bin/bash
 gcc -c $CFILE -o main.s | rename main.s $(basename $CFILE .c).o
