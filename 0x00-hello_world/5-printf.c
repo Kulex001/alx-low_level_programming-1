@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- * A program that uses printf function 
+ * A program that uses printf function
  * to display a string on the screen.
  * main - fuction
  * return - return 0 if successful.

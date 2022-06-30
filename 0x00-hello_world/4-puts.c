@@ -1,8 +1,8 @@
 #include	<stdio.h>
 /*
  * A program to print a string of words
- * main - Entry point
- * return: Always 0 meaning success 
+ * main(void) - Entry point
+ * return: Always 0 meaning success
  */
 int main(void)
 {

@@ -3,6 +3,9 @@
  * TA program that prints sizes  of various
  * types on the computer it is compiled
  * and run on.
+ * main(void) - Entry point.
+ *
+ * return - return 0 if succesful.
  */
 int main(void)
 {
