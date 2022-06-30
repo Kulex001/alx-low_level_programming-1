@@ -1,8 +1,10 @@
 #include	<stdio.h>
 /*
- * A program to print a string of words
  * main(void) - Entry point
- * return: Always 0 meaning success
+ * @void: par  type signify null
+ *
+ * A program to print a string of word
+ * Return: Always 0 meaning success
  */
 int main(void)
 {
