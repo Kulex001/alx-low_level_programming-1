@@ -1,10 +1,9 @@
-#include	<stdio.h>
-/*
- * main(void) - Entry point
- * @void: par  type signify null
+#include <stdio.h>
+/**
+ * main - Entry point of the function
+ * @void: Signify null par
  *
- * A program to print a string of word
- * Return: Always 0 meaning success
+ * Return: 0 (success)
  */
 int main(void)
 {

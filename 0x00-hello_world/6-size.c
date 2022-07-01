@@ -1,12 +1,10 @@
 #include <stdio.h>
 
-/*
- * main(void) - Entry point.
+/**
+ * main - Entry point
+ * @void: signifies null par
  *
- * TA program that prints sizes  of various
- * types on the computer it is compiled
- * and run on.
- * return - return 0 if succesful.
+ * Return: return 0 if succesful.
  */
 int main(void)
 {

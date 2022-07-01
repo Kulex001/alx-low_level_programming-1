@@ -1,12 +1,9 @@
 #include <stdio.h>
-
-/*
- * A program that uses printf function
- * to display a string on the screen.
+/**
+ * main - Entry point of the fuction
+ * @void: Signifies null arg
  *
- * main - fuction
- *
- * return - return 0 if successful.
+ * Return: 0 (success)
  */
 int main(void)
 {
