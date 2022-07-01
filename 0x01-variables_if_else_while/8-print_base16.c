@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - function entry point
+ * @void: param indicates null arg
+ *
+ * Return: 0 to indicate success
+ */
 int main(void)
 {
 	int start = '0';
@@ -10,7 +16,7 @@ int main(void)
 		putchar(start);
 	}
 
-	for(; strt <= 'f'; strt++)
+	for (; strt <= 'f'; strt++)
 	{
 		putchar(strt);
 	}
