@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point of the fuction
  * @void: Signifies null arg
