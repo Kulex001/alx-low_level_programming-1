@@ -14,22 +14,24 @@ int main(void)
 	{
 		for (j = 48; j <= 57; j++)
 		{
+			l = j;
 			for (k = i; k <= 57; k++)
 			{
-				for (l = 48; l <= 57; l++)
+				for (; l <= 57; l++)
 				{
-					if (((i + j) > (k + l)) || (i == k && j == l))
+					if (i == k && j == l)
 						continue;
 					putchar(i);
 					putchar(j);
 					putchar(' ');
 					putchar(k);
 					putchar(l);
-					if (i == 57 && j == 57 && k == 57 && l == 57)
+					if (i == 57 && j == 56 && k == 57 && l == 57)
 						break;
 					putchar(',');
 					putchar(' ');
 				}
+				l = 48;
 			}
 		}
 	}
