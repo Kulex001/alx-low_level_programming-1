@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 /**
  * main - method entry
@@ -9,12 +10,13 @@
 int main(void)
 {
 	int i,  j, k;
+	bool repeat = true;
 
-	for (i = 48; i <= 57; i++)
+	for (i = 48; i <= 57 && repeat; i++)
 	{
-		for (j = 48; j <= 57; j++)
+		for (j = 48; j <= 57 && repeat; j++)
 		{
-			for (k = 48; k <= 57; k++)
+			for (k = 48; k <= 57 && repeat; k++)
 			{
 				if (i == j ||  j == k|| j < i ||k < j)
 				{
@@ -23,8 +25,11 @@ int main(void)
 				putchar(i);
 				putchar(j);
 				putchar(k);
-				if (i == 56 && j == 57 && k == 58)
+				if (i == 55 && j == 56 && k == 57)
+				{
+					repeat = false;
 					break;
+				}
 				putchar(',');
 				putchar(' ');
 			}
