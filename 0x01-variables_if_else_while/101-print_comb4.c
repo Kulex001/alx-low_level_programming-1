@@ -18,7 +18,7 @@ int main(void)
 		{
 			for (k = 48; k <= 57 && repeat; k++)
 			{
-				if (i == j ||  j == k|| j < i ||k < j)
+				if (i == j ||  j == k || j < i || k < j)
 				{
 					continue;
 				}
