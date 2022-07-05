@@ -9,18 +9,11 @@
  */
 int print_last_digit(int x)
 {
-	int last;
+	int last, ab;
 
 	last = x % 10;
-	if (last >= 0)
-	{
-		_putchar(48 + last);
-	}
-	else
-	{
-		_putchar(45);
-		_putchar(48 + abs(last));
-	}
+	ab = abs(last);
+	_printchar(ab + 48);
 
-	return (last);
+	return (ab);
 }
