@@ -29,6 +29,7 @@ void print_to_98(int n)
 		for (; n <= 98; n++)
 		{
 			int p = abs(n);
+
 			if (n < 0)
 				_putchar('-');
 			if (p > 9)
@@ -53,13 +54,18 @@ void print_one(int n)
 /**
  * print_two - print two char
  * @n: arg passed
+ *
+ * Return: break the loop
  */
 void print_two(int n)
 {
 	_putchar((n / 10) + 48);
 	_putchar((n % 10) + 48);
 	if (n == 98)
+	{
+		_putchar('\n');
 		return;
+	}
 	_putchar(',');
 	_putchar(' ');
 }
