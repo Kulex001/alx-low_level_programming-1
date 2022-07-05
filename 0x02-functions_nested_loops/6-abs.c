@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * abs - compute absolute abs of a num.
+ * _abs - compute absolute abs of a num.
  * @a: num passed
  *
  * Return: absolute value
