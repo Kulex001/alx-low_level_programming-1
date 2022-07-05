@@ -13,6 +13,7 @@ void print_to_98(int n)
 	if (n == 98)
 	{
 		print_two(n);
+		_putchar('\n');
 	}
 	else if (n > 98)
 	{
@@ -23,6 +24,7 @@ void print_to_98(int n)
 			else
 				print_three(n);
 		}
+		_putchar('\n');
 	}
 	else
 	{
@@ -37,6 +39,7 @@ void print_to_98(int n)
 			else
 				print_one(p);
 		}
+		_putchar('\n');
 	}
 }
 
@@ -62,10 +65,7 @@ void print_two(int n)
 	_putchar((n / 10) + 48);
 	_putchar((n % 10) + 48);
 	if (n == 98)
-	{
-		_putchar('\n');
 		return;
-	}
 	_putchar(',');
 	_putchar(' ');
 }
