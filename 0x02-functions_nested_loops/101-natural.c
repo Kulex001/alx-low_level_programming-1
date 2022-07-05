@@ -17,7 +17,7 @@ int main(void)
 		s++;
 	}
 
-	printf("%d", mul);
+	printf("%d\n", mul);
 
 	return (0);
 }
