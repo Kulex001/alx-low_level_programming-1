@@ -30,14 +30,14 @@ void print_to_98(int n)
 	{
 		for (; n <= 98; n++)
 		{
-			int p = abs(n);
-
 			if (n < 0)
 				_putchar('-');
-			if (p > 9)
-				print_two(p);
+			if (n > 9 || (n < -9 && n > -100))
+				print_two(n);
+			else if (n <= -100)
+				print_three(n);
 			else
-				print_one(p);
+				print_one(n);
 		}
 		_putchar('\n');
 	}
@@ -49,7 +49,8 @@ void print_to_98(int n)
  */
 void print_one(int n)
 {
-	_putchar(n + 48);
+	int s = abs(n);
+	_putchar(s + 48);
 	_putchar(',');
 	_putchar(' ');
 }
@@ -62,8 +63,10 @@ void print_one(int n)
  */
 void print_two(int n)
 {
-	_putchar((n / 10) + 48);
-	_putchar((n % 10) + 48);
+	int p = abs(n);
+
+	_putchar((p / 10) + 48);
+	_putchar((p % 10) + 48);
 	if (n == 98)
 		return;
 	_putchar(',');
@@ -77,10 +80,11 @@ void print_two(int n)
 void print_three(int n)
 {
 	int p;
+	int s = abs(n);
 
-	_putchar((n / 100) + 48);
+	_putchar((s / 100) + 48);
 
-	p = n - ((n / 100) * 100);
+	p = s - ((s / 100) * 100);
 
 	_putchar((p / 10) + 48);
 	_putchar((p % 10) + 48);
