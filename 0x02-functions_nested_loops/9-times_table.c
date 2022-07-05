@@ -31,7 +31,7 @@ void times_table(void)
 				_putchar((m / 10) + 48);
 				_putchar((m % 10) + 48);
 			}
-			if (m == 81)
+			if (m == 81 || l == 7)
 				break;
 			_putchar(',');
 			_putchar(' ');
