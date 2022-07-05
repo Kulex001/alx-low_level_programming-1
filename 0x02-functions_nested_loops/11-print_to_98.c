@@ -50,6 +50,7 @@ void print_to_98(int n)
 void print_one(int n)
 {
 	int s = abs(n);
+
 	_putchar(s + 48);
 	_putchar(',');
 	_putchar(' ');
