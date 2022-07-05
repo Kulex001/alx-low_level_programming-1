@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "main.h"
 
 /**
  * times_table - print a table
