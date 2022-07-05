@@ -33,9 +33,9 @@ void times_table(void)
 			}
 			if (m == 81)
 				break;
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
