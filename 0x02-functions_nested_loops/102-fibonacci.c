@@ -9,15 +9,15 @@ int main(void)
 {
 	int prev = 1, curr = 2, count = 0, next;
 
-	printf("%d",prev);
+	printf("%d", prev);
 	putchar(',');
-	printf(" %d", curr );
+	printf(" %d", curr);
 	while (count <= 48)
 	{
 		next = prev + curr;
 
 		putchar(',');
-		printf(" %u", next);
+		printf(" %ld", next);
 		prev = curr;
 		curr = next;
 		count++;
