@@ -18,7 +18,7 @@ int main(void)
 		curr = next;
 		prev = curr;
 	}
-	printf("%ld\n", count);
+	printf("%d\n", count);
 
 	return (0);
 }
