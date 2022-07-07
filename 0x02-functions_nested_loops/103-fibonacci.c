@@ -7,13 +7,16 @@
  */
 int main(void)
 {
-	int curr = 2, prev = 1, next, count = 3;
+	int curr = 2, prev = 1, next, count = 2;
 
 	while (next < 4000000)
 	{
 		next = curr + prev;
 
-		count += next;
+		if (next % 2 == 0)
+		{
+			count += next;
+		}
 
 		curr = next;
 		prev = curr;
