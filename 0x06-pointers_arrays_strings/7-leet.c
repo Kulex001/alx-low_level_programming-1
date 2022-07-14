@@ -9,20 +9,29 @@
  */
 char *leet(char *a)
 {
-	char **point;
+	char **point, *sPointer;
 	char b;
-	int n, m;
+	char list1[] = "aAeEoOtTlL";
+	char list2[] = "4433007711";
+	int n, m, o, p, q, r;
 
 	point = &a;
 	n = strlen(a);
+	o = strlen(list1);
 	for (m = 0; m < n; m++)
 	{
 		b = a[m];
-		(b == 'a' || b == 'A') ? a[m] = 52 :
-		(b == 'e' || b == 'E') ? a[m] = 51 :
-		(b == 'o' || b == 'O') ? a[m] = 48 :
-		(b == 't' || b == 'T') ? a[m] = 55 :
-		b == 'l' || b == 'L' ? a[m] = 49 : 0;
+		for (p = 0; p < o; p++)
+		{
+			sPointer = strchr(list1, b);
+			if (sPointer != 0)
+			{
+				q = strlen(sPointer);
+				r = o - q;
+				a[m] = list2[r];
+				break;
+			}
+		}
 	}
 	*point = a;
 
