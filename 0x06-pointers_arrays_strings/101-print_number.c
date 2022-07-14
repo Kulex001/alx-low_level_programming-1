@@ -66,4 +66,20 @@ void printNum(int n)
 			_putchar(48);
 		printNum(m);
 	}
+	else if (n < 10000000)
+	{
+		_putchar((n / 1000000) + 48);
+		m = n % 1000000;
+		if (m < 100000)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 100000000)
+	{
+		_putchar((n / 10000000) + 48);
+		m = n % 10000000;
+		if (m < 1000000)
+			_putchar(48);
+		printNum(m);
+	}
 }
