@@ -92,7 +92,7 @@ void printNum(int n)
 	}
 	else
 	{
-		_putchar(n / 1000000000);
+		_putchar((n / 1000000000) + 48);
 		m = n % 1000000000;
 		if (m < 100000000)
 			_putchar(48);
