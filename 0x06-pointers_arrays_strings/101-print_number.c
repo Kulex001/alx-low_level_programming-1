@@ -1,7 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+void printNum(int);
 
 /**
  * print_number - print numbers
@@ -9,33 +9,93 @@
  */
 void print_number(int n)
 {
-	int i, j, k, m;
-	char str[10];
-
 	if (n < 0)
 		_putchar('-');
-	if (n >= 0 && n < 10)
+	n = abs(n);
+	printNum(n);
+}
+
+/**
+ * printNum - print numbers
+ * @n: number to print
+ */
+void printNum(int n)
+{
+	int m;
+
+	if (n < 10)
 	{
-		_putchar(n + '0');
+		_putchar(48 + n);
 		return;
 	}
-	n = abs(n);
-
-	j = n;
-	while (j != 0)
+	else if (n < 100)
 	{
-		m++;
-		j /= 10;
+		_putchar((n / 10) + 48);
+		m = n % 10;
+		printNum(m);
 	}
-	for (i = 0; i < m; i++)
+	else if (n < 1000)
 	{
-		k = n % 10;
-		n = n / 10;
-		str[m - (i + 1)] = k + '0';
+		_putchar((n / 100) + 48);
+		m = n % 100;
+		if (m < 10)
+			_putchar(48);
+		printNum(m);
 	}
-	str[m] = '\0';
-	k = strlen(str);
-	for (i = 0; i < k; i++)
-		_putchar(str[i]);
-	m = 0;
+	else if (n < 10000)
+	{
+		_putchar((n / 1000) + 48);
+		m = n % 1000;
+		if (m < 100)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 100000)
+	{
+		_putchar((n / 10000) + 48);
+		m = n % 10000;
+		if (m < 1000)
+			_putchar(48);
+		printNum(n % 10000);
+	}
+	else if (n < 1000000)
+	{
+		_putchar((n / 100000) + 48);
+		m = n % 100000;
+		if (m < 10000)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 10000000)
+	{
+		_putchar((n / 1000000) + 48);
+		m = n % 1000000;
+		if (m < 100000)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 100000000)
+	{
+		_putchar((n / 10000000) + 48);
+		m = n % 10000000;
+		if (m < 1000000)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 1000000000)
+	{
+		_putchar((n / 100000000) + 48);
+		m = n % 100000000;
+		if (m < 10000000)
+			_putchar(48);
+		printNum(m);
+	}
+	else if (n < 10000000000)
+	{
+		_putchar(n / 1000000000);
+		m = n % 1000000000;
+		if (m < 100000000)
+			_putchar(48);
+		printNum(m);
+	}
 }
