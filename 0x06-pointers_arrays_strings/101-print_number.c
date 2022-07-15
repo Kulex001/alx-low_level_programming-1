@@ -38,5 +38,4 @@ void print_number(int n)
 	for (i = 0; i < k; i++)
 		_putchar(str[i]);
 	m = 0;
-	
 }
