@@ -15,7 +15,7 @@ int _sqrt_recursion(int n)
 
 	k = 3;
 	i = n;
-	if (n == -1)
+	if (n < 0)
 		return (-1);
 	j = do_sqrt(n, k);
 	m = (int)(j);
