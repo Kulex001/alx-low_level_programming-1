@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 2)
 	{
-		printf("%d", 0);
+		printf("%d\n", 0);
 	}
 	else
 	{
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			}
 			sum += j;
 		}
-		printf("%d", sum);
+		printf("%d\n", sum);
 	}
 	return (0);
 }
