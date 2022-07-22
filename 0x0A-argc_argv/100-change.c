@@ -66,5 +66,5 @@ void counter(int num)
 			num--;
 		}
 	}
-	printf("%d", count);
+	printf("%d\n", count);
 }
