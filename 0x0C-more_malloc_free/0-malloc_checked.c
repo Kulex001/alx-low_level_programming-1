@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc-checked - reserves a memory
+ * malloc_checked - reserves a memory
  * @b: memory size
  * Return: pointer to the memory
  */
