@@ -2,7 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 void process(bool, char **, char *, int, int, int, int);
+void print_tab(char **);
 
 /**
  * strtow - convert a string to words
@@ -74,9 +76,12 @@ char **strtow(char *str)
 void process(bool isfirstword, char **ptr, char *string,
 			int plen, int lenw, int count, int start)
 {
-	int k, j;
+	int k, j, i;
 	char ***ptr3, **ptr2, *ptr1;
 
+	printf("words in a pointer:\n");
+	for (i = 0; i < count; i++)
+		printf("----> word: %s\n", ptr[i]);
 	k = 0;
 	j = 0;
 	ptr3 = &ptr;
@@ -93,7 +98,9 @@ void process(bool isfirstword, char **ptr, char *string,
 	}
 	else
 	{
-		ptr2 = (char **)realloc(ptr, plen);
+		printf("plen: %d\n", plen);
+		printf("last word of ptr: %s\n", ptr[count - 1]);
+		ptr2 =realloc(*ptr3, plen);
 		ptr1 = (char *)malloc(sizeof(char) * lenw);
 		while (j <= lenw)
 		{
@@ -104,4 +111,40 @@ void process(bool isfirstword, char **ptr, char *string,
 		ptr2[count] = ptr1;
 		*ptr3 = ptr2;
 	}
+}
+
+
+/**
+ * print_tab - Prints an array of string
+ * @tab: The array to print
+ *
+ * Return: nothing
+ */
+void print_tab(char **tab)
+{
+    int i;
+
+    for (i = 0; tab[i] != NULL; ++i)
+    {
+        printf("%s\n", tab[i]);
+    }
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: 1 if an error occurred, 0 otherwise
+ */
+int main(void)
+{
+    char **tab;
+
+    tab = strtow("Talk is cheap. Show me the code.");
+    if (tab == NULL)
+    {
+        printf("Failed\n");
+        return (1);
+    }
+    print_tab(tab);
+    return (0);
 }
