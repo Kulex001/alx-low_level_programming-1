@@ -225,6 +225,8 @@ char **add_zeros(char **ptr, int plen)
 			{
 				ptr2[(len + j) - 1] = '0';
 			}
+			j = len + i;
+			printf("i = %d\nprevlen: %d\nlen = %ld\nadd zero: %s\n", i, j, strlen(ptr2), ptr2);
 			ptr[i] = ptr2;
 		}
 	}
@@ -239,6 +241,7 @@ void print_res(char *ptr)
 	int i, j;
 
 	j = strlen(ptr) - 1;
+	printf("string--> %s\n", ptr);
 	for (i = j; i >= 0; i--)
 		_putchar(ptr[i]);
 }
