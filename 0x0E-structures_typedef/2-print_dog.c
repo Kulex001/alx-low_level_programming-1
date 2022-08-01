@@ -10,12 +10,12 @@ void print_dog(struct dog *d)
 	char *name, *owner;
 	int age;
 
-	if (d == NULL)
-		return;
 	name = d->name;
 	owner = d->owner;
 	age = d->age;
 
+	if (name == NULL && owner == NULL && age == (float)0)
+		return;
 	if (name == NULL)
 		name = "nil";
 	if (owner == NULL)
