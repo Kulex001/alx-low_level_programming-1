@@ -32,6 +32,6 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	ans = ptr(num1, num2);
-	printf("%d", ans);
+	printf("%d\n", ans);
 	return (0);
 }
